@@ -161,6 +161,10 @@
           "hash": "7663861978715868291"
         },
         {
+          "file": ".pre-commit-config.yaml",
+          "hash": "10759746912554327662"
+        },
+        {
           "file": ".prettierignore",
           "hash": "14688272390704683536"
         },
