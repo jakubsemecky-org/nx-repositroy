@@ -1,0 +1,9 @@
+default_stages: [ push ]
+repos:
+-   repo: local
+    hooks:
+    -   id: commit-msg
+        name: Commitlint
+        entry: npx commitlint
+        language: system
+        stages: [commit-msg]
