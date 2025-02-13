@@ -122,43 +122,10 @@
           ]
         }
       ],
-      "my-react-app-e2e": [
-        {
-          "file": "my-react-app-e2e/eslint.config.js",
-          "hash": "15297556473855815726",
-          "deps": [
-            "npm:eslint-plugin-playwright"
-          ]
-        },
-        {
-          "file": "my-react-app-e2e/playwright.config.ts",
-          "hash": "17884009361928015446",
-          "deps": [
-            "npm:@playwright/test",
-            "npm:@nx/playwright",
-            "npm:@nx/devkit"
-          ]
-        },
-        {
-          "file": "my-react-app-e2e/project.json",
-          "hash": "2095564636071125275"
-        },
-        {
-          "file": "my-react-app-e2e/src/example.spec.ts",
-          "hash": "16019101014373124625",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "my-react-app-e2e/tsconfig.json",
-          "hash": "13921281020092875063"
-        }
-      ],
       "nx-repositroy": [
         {
           "file": ".gitignore",
-          "hash": "7663861978715868291"
+          "hash": "12300103694737795070"
         },
         {
           "file": ".pre-commit-config.yaml",
@@ -178,7 +145,7 @@
         },
         {
           "file": "README.md",
-          "hash": "11374253781616073673"
+          "hash": "12172994516028469629"
         },
         {
           "file": "eslint.config.js",
@@ -265,6 +232,39 @@
         {
           "file": "tsconfig.base.json",
           "hash": "16936441711144470533"
+        }
+      ],
+      "my-react-app-e2e": [
+        {
+          "file": "my-react-app-e2e/eslint.config.js",
+          "hash": "15297556473855815726",
+          "deps": [
+            "npm:eslint-plugin-playwright"
+          ]
+        },
+        {
+          "file": "my-react-app-e2e/playwright.config.ts",
+          "hash": "17884009361928015446",
+          "deps": [
+            "npm:@playwright/test",
+            "npm:@nx/playwright",
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "my-react-app-e2e/project.json",
+          "hash": "2095564636071125275"
+        },
+        {
+          "file": "my-react-app-e2e/src/example.spec.ts",
+          "hash": "16019101014373124625",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "my-react-app-e2e/tsconfig.json",
+          "hash": "13921281020092875063"
         }
       ]
     }
