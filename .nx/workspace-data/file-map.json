@@ -34,7 +34,6 @@
     }
   ],
   "fileMap": {
-    "nonProjectFiles": [],
     "projectFileMap": {
       "my-react-app": [
         {
@@ -128,10 +127,6 @@
           "hash": "12300103694737795070"
         },
         {
-          "file": ".pre-commit-config.yaml",
-          "hash": "10759746912554327662"
-        },
-        {
           "file": ".prettierignore",
           "hash": "14688272390704683536"
         },
@@ -174,11 +169,11 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "3041460326299316644"
+          "hash": "14468709082518271734"
         },
         {
           "file": "package.json",
-          "hash": "11860496340255886665",
+          "hash": "1301013565658626958",
           "deps": [
             "npm:@eslint/js",
             "npm:@nrwl/node",
@@ -205,7 +200,6 @@
             "npm:@vitejs/plugin-react",
             "npm:@vitest/ui",
             "npm:babel-jest",
-            "npm:eslint",
             "npm:eslint-config-prettier",
             "npm:eslint-plugin-import",
             "npm:eslint-plugin-jsx-a11y",
@@ -267,6 +261,7 @@
           "hash": "13921281020092875063"
         }
       ]
-    }
+    },
+    "nonProjectFiles": []
   }
 }
