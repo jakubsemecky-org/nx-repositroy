@@ -64,5 +64,10 @@
   },
   "release": {
     "analyzeCommits": "simple-commit-message"
+  },
+  "config": {
+    "pre-git": {
+      "commit-msg": "simple"
+    }
   }
 }
