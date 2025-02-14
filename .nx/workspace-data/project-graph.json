@@ -6313,15 +6313,6 @@
         "hash": "sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ=="
       }
     },
-    "npm:wrap-ansi@7.0.0": {
-      "type": "npm",
-      "name": "npm:wrap-ansi@7.0.0",
-      "data": {
-        "version": "7.0.0",
-        "packageName": "wrap-ansi",
-        "hash": "sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q=="
-      }
-    },
     "npm:clone": {
       "type": "npm",
       "name": "npm:clone",
@@ -13538,6 +13529,15 @@
         "version": "1.2.5",
         "packageName": "word-wrap",
         "hash": "sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA=="
+      }
+    },
+    "npm:wrap-ansi": {
+      "type": "npm",
+      "name": "npm:wrap-ansi",
+      "data": {
+        "version": "7.0.0",
+        "packageName": "wrap-ansi",
+        "hash": "sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q=="
       }
     },
     "npm:wrappy": {
@@ -22172,24 +22172,7 @@
       },
       {
         "source": "npm:cliui",
-        "target": "npm:wrap-ansi@7.0.0",
-        "type": "static"
-      }
-    ],
-    "npm:wrap-ansi@7.0.0": [
-      {
-        "source": "npm:wrap-ansi@7.0.0",
-        "target": "npm:ansi-styles@4.3.0",
-        "type": "static"
-      },
-      {
-        "source": "npm:wrap-ansi@7.0.0",
-        "target": "npm:string-width",
-        "type": "static"
-      },
-      {
-        "source": "npm:wrap-ansi@7.0.0",
-        "target": "npm:strip-ansi",
+        "target": "npm:wrap-ansi",
         "type": "static"
       }
     ],
@@ -32428,6 +32411,23 @@
         "type": "static"
       }
     ],
+    "npm:wrap-ansi": [
+      {
+        "source": "npm:wrap-ansi",
+        "target": "npm:ansi-styles@4.3.0",
+        "type": "static"
+      },
+      {
+        "source": "npm:wrap-ansi",
+        "target": "npm:string-width",
+        "type": "static"
+      },
+      {
+        "source": "npm:wrap-ansi",
+        "target": "npm:strip-ansi",
+        "type": "static"
+      }
+    ],
     "npm:write-file-atomic": [
       {
         "source": "npm:write-file-atomic",
@@ -32480,5 +32480,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1739454556963
+  "computedAt": 1739525983208
 }

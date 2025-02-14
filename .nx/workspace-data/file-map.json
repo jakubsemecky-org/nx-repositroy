@@ -34,7 +34,115 @@
     }
   ],
   "fileMap": {
+    "nonProjectFiles": [],
     "projectFileMap": {
+      "nx-repositroy": [
+        {
+          "file": ".gitignore",
+          "hash": "12300103694737795070"
+        },
+        {
+          "file": ".prettierignore",
+          "hash": "14688272390704683536"
+        },
+        {
+          "file": ".prettierrc",
+          "hash": "16267754514737964994"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "10066300031063478629"
+        },
+        {
+          "file": "README.md",
+          "hash": "13544886350902961134"
+        },
+        {
+          "file": "eslint.config.js",
+          "hash": "2478217381773231556",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "jest.config.ts",
+          "hash": "3494843969422251966",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "jest.preset.js",
+          "hash": "9430166341120122740",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "nx.json",
+          "hash": "8677507780161068391"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "15298302471366491350"
+        },
+        {
+          "file": "package.json",
+          "hash": "1301013565658626958",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@nrwl/node",
+            "npm:@nrwl/react",
+            "npm:@nx/devkit",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
+            "npm:@nx/jest",
+            "npm:@nx/js",
+            "npm:@nx/playwright",
+            "npm:@nx/react",
+            "npm:@nx/vite",
+            "npm:@nx/web",
+            "npm:@playwright/test",
+            "npm:@swc-node/register",
+            "npm:@swc/cli",
+            "npm:@swc/core",
+            "npm:@swc/helpers",
+            "npm:@testing-library/react",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@vitejs/plugin-react",
+            "npm:@vitest/ui",
+            "npm:babel-jest",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-import",
+            "npm:eslint-plugin-jsx-a11y",
+            "npm:eslint-plugin-playwright",
+            "npm:eslint-plugin-react",
+            "npm:eslint-plugin-react-hooks",
+            "npm:jest",
+            "npm:jest-environment-jsdom",
+            "npm:jsdom",
+            "npm:nx",
+            "npm:prettier",
+            "npm:ts-jest",
+            "npm:ts-node",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:vite",
+            "npm:vitest",
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "tsconfig.base.json",
+          "hash": "16936441711144470533"
+        }
+      ],
       "my-react-app": [
         {
           "file": "my-react-app/eslint.config.js",
@@ -121,113 +229,6 @@
           ]
         }
       ],
-      "nx-repositroy": [
-        {
-          "file": ".gitignore",
-          "hash": "12300103694737795070"
-        },
-        {
-          "file": ".prettierignore",
-          "hash": "14688272390704683536"
-        },
-        {
-          "file": ".prettierrc",
-          "hash": "16267754514737964994"
-        },
-        {
-          "file": ".vscode/extensions.json",
-          "hash": "10066300031063478629"
-        },
-        {
-          "file": "README.md",
-          "hash": "12172994516028469629"
-        },
-        {
-          "file": "eslint.config.js",
-          "hash": "2478217381773231556",
-          "deps": [
-            "npm:@nx/eslint-plugin"
-          ]
-        },
-        {
-          "file": "jest.config.ts",
-          "hash": "3494843969422251966",
-          "deps": [
-            "npm:@nx/jest"
-          ]
-        },
-        {
-          "file": "jest.preset.js",
-          "hash": "9430166341120122740",
-          "deps": [
-            "npm:@nx/jest"
-          ]
-        },
-        {
-          "file": "nx.json",
-          "hash": "8677507780161068391"
-        },
-        {
-          "file": "package-lock.json",
-          "hash": "14468709082518271734"
-        },
-        {
-          "file": "package.json",
-          "hash": "1301013565658626958",
-          "deps": [
-            "npm:@eslint/js",
-            "npm:@nrwl/node",
-            "npm:@nrwl/react",
-            "npm:@nx/devkit",
-            "npm:@nx/eslint",
-            "npm:@nx/eslint-plugin",
-            "npm:@nx/jest",
-            "npm:@nx/js",
-            "npm:@nx/playwright",
-            "npm:@nx/react",
-            "npm:@nx/vite",
-            "npm:@nx/web",
-            "npm:@playwright/test",
-            "npm:@swc-node/register",
-            "npm:@swc/cli",
-            "npm:@swc/core",
-            "npm:@swc/helpers",
-            "npm:@testing-library/react",
-            "npm:@types/jest",
-            "npm:@types/node",
-            "npm:@types/react",
-            "npm:@types/react-dom",
-            "npm:@vitejs/plugin-react",
-            "npm:@vitest/ui",
-            "npm:babel-jest",
-            "npm:eslint-config-prettier",
-            "npm:eslint-plugin-import",
-            "npm:eslint-plugin-jsx-a11y",
-            "npm:eslint-plugin-playwright",
-            "npm:eslint-plugin-react",
-            "npm:eslint-plugin-react-hooks",
-            "npm:jest",
-            "npm:jest-environment-jsdom",
-            "npm:jsdom",
-            "npm:nx",
-            "npm:prettier",
-            "npm:ts-jest",
-            "npm:ts-node",
-            "npm:tslib",
-            "npm:typescript",
-            "npm:typescript-eslint",
-            "npm:vite",
-            "npm:vitest",
-            "npm:react",
-            "npm:react-dom",
-            "npm:react-router-dom"
-          ]
-        },
-        {
-          "file": "tsconfig.base.json",
-          "hash": "16936441711144470533"
-        }
-      ],
       "my-react-app-e2e": [
         {
           "file": "my-react-app-e2e/eslint.config.js",
@@ -261,7 +262,6 @@
           "hash": "13921281020092875063"
         }
       ]
-    },
-    "nonProjectFiles": []
+    }
   }
 }
