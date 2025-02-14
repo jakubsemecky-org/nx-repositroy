@@ -64,7 +64,7 @@
   },
   "config": {
     "pre-git": {
-      "commit-msg": "commitlint"
+      "commit-msg": "simple"
     }
   }
 }
