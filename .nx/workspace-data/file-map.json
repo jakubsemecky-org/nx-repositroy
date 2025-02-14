@@ -88,7 +88,7 @@
         },
         {
           "file": "package.json",
-          "hash": "14607701084255371394",
+          "hash": "14529530474626256999",
           "deps": [
             "npm:@commitlint/cli",
             "npm:@commitlint/config-conventional",
