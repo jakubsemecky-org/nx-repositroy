@@ -62,9 +62,7 @@
     "react-dom": "18.3.1",
     "react-router-dom": "6.11.2"
   },
-  "config": {
-    "pre-git": {
-      "commit-msg": "simple"
-    }
+  "release": {
+    "analyzeCommits": "simple-commit-message"
   }
 }
