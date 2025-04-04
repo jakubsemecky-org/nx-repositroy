@@ -42,7 +42,7 @@ jobs:
       contents: write # Required for creating branches, commits, and tags
       pull-requests: write # Required for creating pull requests
 
-    steps:
+    steps:     
       - name: Checkout code
         uses: actions/checkout@v4
         with:
@@ -84,10 +84,73 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Create versions and Git Tags
-      - name: Run NX Release
+      - name: Validate Semantic Version
+        id: validate_version
         if: steps.validate_nx_release.outcome == 'success' && github.event.inputs.confirm == 'true'
+        run: |
+          TRANSCREATION_API="${{ github.event.inputs.transcreation-api-version }}"
+          TRACKING_API="${{ github.event.inputs.tracking-api-version }}"
+          MANAGE_API="${{ github.event.inputs.manage-api-version }}"
+          MANAGE_UI="${{ github.event.inputs.manage-ui-version }}"
+          ALL_VALID=true          
+
+          if [[ ! -z "$TRANSCREATION_API" ]]; then
+            if [[ "$TRANSCREATION_API" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "Provided 'transcreation-api-version: $TRANSCREATION_API' is a valid semantic version."
+            else
+              echo "Provided 'transcreation-api-version: $TRANSCREATION_API' is NOT a valid semantic version.  It must be in the format X.Y.Z (e.g., 1.2.3)."
+              ALL_VALID=false
+            fi
+          fi
+          if [[ ! -z "$TRACKING_API" ]]; then
+            if [[ "$TRACKING_API" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "Provided 'tracking-api-version: $TRACKING_API' is a valid semantic version."
+            else
+              echo "Provided 'tracking-api-version: $TRACKING_API' is NOT a valid semantic version.  It must be in the format X.Y.Z (e.g., 1.2.3)."
+              ALL_VALID=false
+            fi
+          fi
+          if [[ ! -z "$MANAGE_API" ]]; then
+            if [[ "$MANAGE_API" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "Provided 'manage-api-version: $MANAGE_API' is a valid semantic version."
+            else
+              echo "Provided 'manage-api-version: $MANAGE_API' is NOT a valid semantic version.  It must be in the format X.Y.Z (e.g., 1.2.3)."
+              ALL_VALID=false
+            fi
+          fi
+          if [[ ! -z "$MANAGE_UI" ]]; then
+            if [[ "$MANAGE_UI" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "Provided 'manage-ui-version: $MANAGE_UI' is a valid semantic version."
+            else
+              echo "Provided 'manage-ui-version: $MANAGE_UI' is NOT a valid semantic version.  It must be in the format X.Y.Z (e.g., 1.2.3)."
+              ALL_VALID=false
+            fi
+          fi
+
+          if [[ "$ALL_VALID" == "false" ]]; then
+            echo "::set-output name=valid::false"
+            exit 1 # Fail the workflow if any version is invalid
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Create versions and Git Tags of the rest of projects
+      - name: Run NX Release
+        if: steps.validate_version.outcome == 'success' && github.event.inputs.confirm == 'true'
         id: nx_release
         run: |
+          if [[ ! -z "${{ github.event.inputs.transcreation-api-version }}" ]]; then
+            npx nx release -p transcreation-api --skip-publish ${{ github.event.inputs.transcreation-api-version }}
+          fi
+          if [[ ! -z "${{ github.event.inputs.tracking-api-version }}" ]]; then
+            npx nx release -p tracking-api-version --skip-publish ${{ github.event.inputs.tracking-api-version }}
+          fi
+          if [[ ! -z "${{ github.event.inputs.manage-api-version }}" ]]; then
+            npx nx release -p manage-api-version --skip-publish ${{ github.event.inputs.manage-api-version }}
+          fi
+          if [[ ! -z "${{ github.event.inputs.manage-ui-version }}" ]]; then
+            npx nx release -p manage-ui-version --skip-publish ${{ github.event.inputs.manage-ui-version }}
+          fi
           npx nx release --skip-publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
