@@ -1,6 +1,6 @@
 {
   "name": "nx-repositroy",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "empty nx repo to test versioning and commitizen",
   "main": "index.js",
   "scripts": {

@@ -12,7 +12,7 @@ on:
         description: 'Release branch name (eg: sprint-10)'
         type: string
         required: true
-        default: 'sprint-x'
+        default: 'sprint-'
       transcreation-api-version:
         description: 'Override Transcreation API version'
         type: string
@@ -35,7 +35,7 @@ on:
         default: ''
 
 jobs:
-  release:
+  create-a-release:
     runs-on: ubuntu-latest
     permissions:
       id-token: write # Required for AWS access
@@ -48,7 +48,7 @@ jobs:
         with:
           fetch-depth: 0 # Required for accurate changelog generation and nx release
 
-      - name: Set up Node.js
+      - name: Set up Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -60,14 +60,14 @@ jobs:
           npm ci
           npx nx report
 
-      - name: Determine date and branch names
+      - name: Determine release branch names
         id: variables
         run: |
-          echo "feature_branch=feature/release-${{ github.event.inputs.confirm }}" >> $GITHUB_OUTPUT
-          echo "release_branch=release/${{ github.event.inputs.confirm }}" >> $GITHUB_OUTPUT
+          echo "feature_branch=feature/release-${{ github.event.inputs.release_name }}" >> $GITHUB_OUTPUT
+          echo "release_branch=release/${{ github.event.inputs.release_name }}" >> $GITHUB_OUTPUT
 
       # Create temporary feature branch from main, that will be used to raise versions
-      - name: Create feature branch
+      - name: Create feature branch feature/release-${{ github.event.inputs.release_name }}
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
@@ -93,7 +93,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Create release branch and push changes to GitHub
-      - name: Create release branch
+      - name: Create release branch release/${{ github.event.inputs.release_name }}
         if: steps.nx_release.outcome == 'success' && github.event.inputs.confirm == 'true'
         run: |
           git checkout ${{ steps.variables.outputs.feature_branch }}

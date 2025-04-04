@@ -31,6 +31,14 @@
       }
     }
   ],
+  "release": {
+    "projects": ["*"],
+    "projectsRelationship": "independent",
+    "releaseTagPattern": "{projectName}-v{version}",
+    "version": {
+      "conventionalCommits": true
+    }
+  },
   "targetDefaults": {
     "e2e-ci--**/*": {
       "dependsOn": ["^build"]
