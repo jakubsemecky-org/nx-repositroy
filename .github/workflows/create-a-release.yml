@@ -1,35 +1,39 @@
 name: Create a Release
 
+branding:
+  icon: 'award'
+  color: 'green'
+
 on:
   workflow_dispatch: # Allows manual triggering of the workflow
     inputs:
-      confirm:
-        description: 'Confirm Release (Dry Run by default)'
-        type: boolean
-        required: false
-        default: false
       release_name:
         description: 'Release branch name (eg: sprint-10)'
         type: string
         required: true
         default: 'sprint-'
+      confirm:
+        description: 'Confirm Release (Dry Run by default)'
+        type: boolean
+        required: false
+        default: false
       transcreation-api-version:
-        description: '[!] Transcreation API version'
+        description: 'Override Transcreation API version (?)'
         type: string
         required: false
         default: ''
       tracking-api-version:
-        description: '[!] Tracking API version'
+        description: 'Override Tracking API version (?)'
         type: string
         required: false
         default: ''
       manage-api-version:
-        description: '[!] Manage API version'
+        description: 'Override Manage API version (?)'
         type: string
         required: false
         default: ''
       manage-ui-version:
-        description: '[!] Manage UI version'
+        description: 'Override Manage UI version (?)'
         type: string
         required: false
         default: ''
