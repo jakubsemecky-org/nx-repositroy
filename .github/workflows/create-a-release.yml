@@ -143,13 +143,13 @@ jobs:
             npx nx release -p transcreation-api --skip-publish ${{ github.event.inputs.transcreation-api-version }}
           fi
           if [[ ! -z "${{ github.event.inputs.tracking-api-version }}" ]]; then
-            npx nx release -p tracking-api-version --skip-publish ${{ github.event.inputs.tracking-api-version }}
+            npx nx release -p tracking-api --skip-publish ${{ github.event.inputs.tracking-api-version }}
           fi
           if [[ ! -z "${{ github.event.inputs.manage-api-version }}" ]]; then
-            npx nx release -p manage-api-version --skip-publish ${{ github.event.inputs.manage-api-version }}
+            npx nx release -p manage-api --skip-publish ${{ github.event.inputs.manage-api-version }}
           fi
           if [[ ! -z "${{ github.event.inputs.manage-ui-version }}" ]]; then
-            npx nx release -p manage-ui-version --skip-publish ${{ github.event.inputs.manage-ui-version }}
+            npx nx release -p nx-repository --skip-publish ${{ github.event.inputs.manage-ui-version }}
           fi
           npx nx release --skip-publish
         env:
