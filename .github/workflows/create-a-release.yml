@@ -14,22 +14,22 @@ on:
         required: true
         default: 'sprint-'
       transcreation-api-version:
-        description: 'Override Transcreation API version'
+        description: '[!] Transcreation API version'
         type: string
         required: false
         default: ''
       tracking-api-version:
-        description: 'Override Tracking API version'
+        description: '[!] Tracking API version'
         type: string
         required: false
         default: ''
       manage-api-version:
-        description: 'Override Manage API version'
+        description: '[!] Manage API version'
         type: string
         required: false
         default: ''
       manage-ui-version:
-        description: 'Override Manage UI version'
+        description: '[!] Manage UI version'
         type: string
         required: false
         default: ''
