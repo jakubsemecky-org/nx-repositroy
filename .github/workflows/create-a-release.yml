@@ -171,7 +171,7 @@ jobs:
         with:
           script: |
             //const github = require('@actions/github');
-            const core = require('@actions/core');
+            //const core = require('@actions/core');
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const base = 'main';
